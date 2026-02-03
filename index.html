@@ -282,11 +282,18 @@ d3.csv("dataset.csv").then(data => {
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
     let grouped = d3.groups(data, d => d[groupKey]).map(([k, rows]) => {
-      const obj = { key: k };
-      stackKeys.forEach(s => obj[s] = 0);
-      rows.forEach(r => obj[r[valueKey]]++);
-      return obj;
+    const obj = { key: k, _raw: {} };
+    stackKeys.forEach(s => {
+        obj[s] = 0;
+        obj._raw[s] = 0;
     });
+    rows.forEach(r => {
+        obj[r[valueKey]]++;
+        obj._raw[r[valueKey]]++;
+    });
+    return obj;
+    });
+
 
     grouped.sort((a, b) =>
       d3.sum(stackKeys, s => b[s]) - d3.sum(stackKeys, s => a[s])
@@ -326,19 +333,24 @@ d3.csv("dataset.csv").then(data => {
       .attr("y", d => y(d[1]))
       .attr("height", d => y(d[0]) - y(d[1]))
       .attr("width", x.bandwidth())
-      .on("mousemove", function(event, d) {
-        const category = d3.select(this.parentNode).datum().key;
-        const value = d[1] - d[0];
-        tooltip
-          .style("opacity", 1)
-          .html(`
-            <strong>${d.data.key}</strong><br/>
-            ${category}: ${normalize ? d3.format(".1%")(value) : value}
-          `)
-          .style("left", (event.pageX + 10) + "px")
-          .style("top", (event.pageY - 28) + "px");
-      })
-      .on("mouseout", () => tooltip.style("opacity", 0));
+    .on("mousemove", function(event, d) {
+    const category = d3.select(this.parentNode).datum().key;
+    const percentage = d[1] - d[0];
+    const rawCount = d.data._raw[category];
+
+    tooltip
+        .style("opacity", 1)
+        .html(`
+        <strong>${d.data.key}</strong><br/>
+        ${category}<br/>
+        Count: ${rawCount}<br/>
+        ${normalize ? `Percentage: ${d3.format(".1%")(percentage)}` : ""}
+        `)
+        .style("left", (event.pageX + 10) + "px")
+        .style("top", (event.pageY - 28) + "px");
+    })
+    .on("mouseout", () => tooltip.style("opacity", 0));
+
 
     g.append("g")
       .attr("transform", `translate(0,${height})`)
