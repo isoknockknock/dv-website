@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prompt Dataset D3 Dashboard</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+<style>
+  body {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f8;
+    color: #333;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 40px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    margin-bottom: 6px;
+    font-size: 20px;
+  }
+
+  .section {
+    margin-bottom: 50px;
+  }
+
+  .chart-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .chart-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+
+  .chart-card.full {
+    grid-column: 1 / -1;
+  }
+
+  svg {
+    display: block;
+    margin: auto;
+  }
+
+  .chart-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 13px;
+    color: #888;
+    margin-top: 40px;
+  }
+
+  rect:hover {
+    opacity: 0.75;
+    cursor: pointer;
+  }
+
+  /* ================= TOOLTIP ================= */
+  #tooltip {
+    position: absolute;
+    padding: 8px 10px;
+    background: rgba(0,0,0,0.85);
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+  }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Prompt Dataset Visualisations</h1>
+  <p class="subtitle">
+    Exploratory analysis of language, intent, and sport distributions
+  </p>
+
+  <!-- ================= PIE CHARTS ================= -->
+  <div class="section">
+    <div class="chart-grid">
+
+      <div class="chart-card">
+        <h2>Language Distribution</h2>
+        <p class="chart-description">
+          Share of prompts written in English versus Spanish.
+        </p>
+        <svg id="langPie" width="350" height="300"></svg>
+      </div>
+
+      <div class="chart-card">
+        <h2>Intent Distribution</h2>
+        <p class="chart-description">
+          Overall distribution of prompt intents across the dataset.
+        </p>
+        <svg id="intentPie" width="500" height="300"></svg>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= SPORT × LANGUAGE ================= -->
+  <div class="section">
+    <div class="chart-card full">
+      <h2>Sport × Language (Counts)</h2>
+      <p class="chart-description">
+        Absolute number of prompts per sport, split by language.
+      </p>
+      <svg id="sportLang" width="900" height="350"></svg>
+    </div>
+  </div>
+
+  <!-- ================= SPORT × INTENT ================= -->
+  <div class="section">
+    <div class="chart-card full">
+      <h2>Sport × Intent (Normalized)</h2>
+      <p class="chart-description">
+        Percentage distribution of intent types within each sport.
+      </p>
+      <svg id="sportIntent" width="900" height="350"></svg>
+    </div>
+  </div>
+
+  <!-- ================= LANGUAGE × INTENT ================= -->
+  <div class="section">
+    <div class="chart-card full">
+      <h2>Language × Intent (Normalized)</h2>
+      <p class="chart-description">
+        Comparison of intent composition between English and Spanish prompts.
+      </p>
+      <svg id="langIntent" width="1000" height="350"></svg>
+    </div>
+  </div>
+
+  <footer>
+    D3.js Visual Analytics Dashboard
+  </footer>
+
+</div>
+
+<!-- TOOLTIP ELEMENT -->
+<div id="tooltip"></div>
+
+<script>
+d3.csv("dataset.csv").then(data => {
+
+  const tooltip = d3.select("#tooltip");
+
+  // ---------------------------
+  // Normalize
+  // ---------------------------
+  data.forEach(d => {
+    d.language = d.language.toLowerCase().trim();
+    d.intent = d.intent.toLowerCase().trim();
+    d.sport = d.sport.toLowerCase().trim();
+  });
+
+  const languages = ["english", "spanish"];
+  const intents = Array.from(new Set(data.map(d => d.intent)));
+
+  // ===================================================
+  // LEGEND FUNCTION
+  // ===================================================
+  function drawLegend(svg, keys, color, x, y) {
+    const legend = svg.append("g")
+      .attr("transform", `translate(${x},${y})`);
+
+    keys.forEach((k, i) => {
+      const row = legend.append("g")
+        .attr("transform", `translate(0, ${i * 18})`);
+
+      row.append("rect")
+        .attr("width", 14)
+        .attr("height", 14)
+        .attr("fill", color(k));
+
+      row.append("text")
+        .attr("x", 20)
+        .attr("y", 12)
+        .style("font-size", "12px")
+        .text(k);
+    });
+  }
+
+  // ===================================================
+  // PIE CHART
+  // ===================================================
+  function pieChart(svgId, key) {
+    const svg = d3.select(svgId);
+    const w = +svg.attr("width");
+    const h = +svg.attr("height");
+    const r = Math.min(w, h) / 2 - 20;
+
+    const g = svg.append("g")
+      .attr("transform", `translate(${w/2},${h/2})`);
+
+    const counts = d3.rollup(data, v => v.length, d => d[key]);
+    const pieData = Array.from(counts, ([k,v]) => ({k,v}));
+
+    const pie = d3.pie().value(d => d.v);
+    const arc = d3.arc().innerRadius(0).outerRadius(r);
+    const labelArc = d3.arc().innerRadius(r * 0.6).outerRadius(r * 0.6);
+
+    const color = d3.scaleOrdinal()
+      .domain(pieData.map(d => d.k))
+      .range(d3.schemeTableau10);
+
+    const total = d3.sum(pieData, d => d.v);
+
+    const arcs = g.selectAll("g")
+      .data(pie(pieData))
+      .enter().append("g");
+
+    arcs.append("path")
+      .attr("d", arc)
+      .attr("fill", d => color(d.data.k))
+      .attr("stroke", "white")
+      .on("mousemove", (event, d) => {
+        tooltip
+          .style("opacity", 1)
+          .html(`
+            <strong>${d.data.k}</strong><br/>
+            Count: ${d.data.v}<br/>
+            ${(d.data.v / total * 100).toFixed(1)}%
+          `)
+          .style("left", (event.pageX + 10) + "px")
+          .style("top", (event.pageY - 28) + "px");
+      })
+      .on("mouseout", () => tooltip.style("opacity", 0));
+
+    arcs.append("text")
+      .attr("transform", d => `translate(${labelArc.centroid(d)})`)
+      .attr("text-anchor", "middle")
+      .attr("fill", "white")
+      .attr("font-weight", "bold")
+      .text(d => `${((d.data.v / total) * 100).toFixed(1)}%`);
+
+    drawLegend(svg, pieData.map(d => d.k), color, 10, 10);
+  }
+
+  pieChart("#langPie", "language");
+  pieChart("#intentPie", "intent");
+
+  // ===================================================
+  // STACKED BAR CHART
+  // ===================================================
+  function stackedBar(svgId, groupKey, stackKeys, valueKey, normalize) {
+    const svg = d3.select(svgId);
+    const margin = {top: 20, right: 140, bottom: 60, left: 60};
+    const width = +svg.attr("width") - margin.left - margin.right;
+    const height = +svg.attr("height") - margin.top - margin.bottom;
+
+    const g = svg.append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+    let grouped = d3.groups(data, d => d[groupKey]).map(([k, rows]) => {
+      const obj = { key: k };
+      stackKeys.forEach(s => obj[s] = 0);
+      rows.forEach(r => obj[r[valueKey]]++);
+      return obj;
+    });
+
+    grouped.sort((a, b) =>
+      d3.sum(stackKeys, s => b[s]) - d3.sum(stackKeys, s => a[s])
+    );
+
+    if (normalize) {
+      grouped.forEach(d => {
+        const sum = d3.sum(stackKeys, s => d[s]);
+        stackKeys.forEach(s => d[s] = sum ? d[s] / sum : 0);
+      });
+    }
+
+    const x = d3.scaleBand()
+      .domain(grouped.map(d => d.key))
+      .range([0, width])
+      .padding(0.2);
+
+    const y = d3.scaleLinear()
+      .domain([0, normalize ? 1 : d3.max(grouped, d => d3.sum(stackKeys, s => d[s]))])
+      .range([height, 0]);
+
+    const color = d3.scaleOrdinal()
+      .domain(stackKeys)
+      .range(d3.schemeTableau10);
+
+    const stack = d3.stack().keys(stackKeys);
+    const series = stack(grouped);
+
+    g.selectAll(".layer")
+      .data(series)
+      .enter().append("g")
+      .attr("fill", d => color(d.key))
+      .selectAll("rect")
+      .data(d => d)
+      .enter().append("rect")
+      .attr("x", d => x(d.data.key))
+      .attr("y", d => y(d[1]))
+      .attr("height", d => y(d[0]) - y(d[1]))
+      .attr("width", x.bandwidth())
+      .on("mousemove", function(event, d) {
+        const category = d3.select(this.parentNode).datum().key;
+        const value = d[1] - d[0];
+        tooltip
+          .style("opacity", 1)
+          .html(`
+            <strong>${d.data.key}</strong><br/>
+            ${category}: ${normalize ? d3.format(".1%")(value) : value}
+          `)
+          .style("left", (event.pageX + 10) + "px")
+          .style("top", (event.pageY - 28) + "px");
+      })
+      .on("mouseout", () => tooltip.style("opacity", 0));
+
+    g.append("g")
+      .attr("transform", `translate(0,${height})`)
+      .call(d3.axisBottom(x))
+      .selectAll("text")
+      .attr("transform", "rotate(-30)")
+      .style("text-anchor", "end");
+
+    g.append("g")
+      .call(d3.axisLeft(y).tickFormat(normalize ? d3.format(".0%") : null));
+
+    drawLegend(svg, stackKeys, color, width + margin.left + 10, margin.top);
+  }
+
+  stackedBar("#sportLang", "sport", languages, "language", false);
+  stackedBar("#sportIntent", "sport", intents, "intent", true);
+  stackedBar("#langIntent", "language", intents, "intent", true);
+
+});
+</script>
+
+</body>
+</html>

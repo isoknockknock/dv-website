@@ -1,0 +1,229 @@
+prompt,matched_keyword,language,sport,intent
+"But I don't want to play chess on other platforms, I want to play chess with you. We don't have to describe the sequence in words at all, we can just use chess notation.",chess,english,chess,correction
+I was talking about American football.,american football,english,american football,correction
+"I'm not asking about a hypothetical anime that might exist, I'm asking a question about an anime that does exist where there are concrete correct answers. What significance does baseball have in ""Midoriyama Koukou Koushien-hen""?",baseball,english,baseball,correction
+"if you mean who is best football player ever,  the the answer is : Messy, Lionel",football,english,football,correction
+"That is incorrect. I will give you some help. The `python-chess` library has some helpful tools for visualizing board states and legal moves. An example would look like this: 
+
+```python
+import chess
+
+myfen = '4k3/2b5/8/8/8/2K5/4N3/8 w - - 0 1'
+myboard = chess.Board(myfen)
+print(myboard)
+
+```
+```
+. . . . k . . .
+. . b . . . . .
+. . . . . . . .
+. . . . . . . .
+. . . . . . . .
+. . K . . . . .
+. . . . N . . .
+. . . . . . . .
+
+```
+Let's try again. What is the solution to this mate-in-one puzzle where black is to move? The FEN is `8/8/K7/2k5/8/8/8/1q6 b - - 0 1`",chess,english,chess,correction
+"That makes sense, thanks for explaining the different roles and skills required for attackers and defenders in football. It sounds like teamwork is key to success on the field.",football,english,football,correction
+"That's incorrect. There was no Fifa Football World Cup held in 2019. The recent world cups were held in 2014, 2018 and 2022",world cup,english,football,correction
+"The second answer for the world cup in qatar in 2019 is wrong, liverpool is not a country is a team for the england league, and the Qatar world cup was in 2022 not 2019",world cup,english,football,correction
+"This did not really answer my question. I was asking how many players can play Go. Is it like Chess, which can only really be played with two people or more like Poker which can be played with two or more people?",chess,english,chess,correction
+"This doesn't look like a chessboard, could you try again?",chess,english,chess,correction
+Very thorough article that is in accordance with ChatGPT4:s answer (I personally don't know anything about basketball).,basketball,english,basketball,correction
+"You missed that I made an illegal move. If I make an invalid move, I would like you to notify me. Let's try again! I play f1g2. Your turn.",chess,english,chess,correction
+"You're bad at chess? But you're an AI, AIs are supposed to be awesome at chess. You should ask Stockfish to teach you how to play!",chess,english,chess,correction
+"Hola! Argentina ha ganado 3 Copas del Mundo de la FIFA. La primera fue en 1978 en Argentina, la segunda en 1986 en México y la última en el 2022 en Qatar.",fifa,spanish,football,correction
+"Can we play a game of chess, using this dialog interface ? We could take turns telling each other the move sequences until one of us wins.",chess,english,chess,creative
+"Can you write a TL;DR for the following paragraphs:
+
+Messi was born on 24 June 1987 in Rosario, Santa Fe,[8] the third of four children of Jorge Messi, a steel factory manager, and his wife Celia Cuccittini, who worked in a magnet manufacturing workshop. On his father's side, he is of Italian and Spanish descent, the great-grandson of immigrants from the north-central Adriatic Marche region of Italy, and on his mother's side, he has primarily Italian ancestry.[3] Growing up in a tight-knit, football-loving family, ""Leo"" developed a passion for the sport from an early age, playing constantly with his older brothers, Rodrigo and Matías, and his cousins, Maximiliano and Emanuel Biancucchi, both of whom became professional footballers.[9] At the age of four he joined local club Grandoli, where he was coached by his father, though his earliest influence as a player came from his maternal grandmother, Celia, who accompanied him to training and matches.[10] He was greatly affected by her death, shortly before his eleventh birthday; since then, as a devout Roman Catholic, he has celebrated his goals by looking up and pointing to the sky in tribute to his grandmother.[11][12]
+
+""When you saw him you would think: this kid can't play ball. He's a dwarf, he's too fragile, too small. But immediately you'd realise that he was born different, that he was a phenomenon and that he was going to be something impressive.""
+– Newell's Old Boys youth coach Adrián Coria shares his first impression of the 12-year-old Messi.[13]
+
+A lifelong supporter of Newell's Old Boys, Messi joined the Rosario club when he was six years old. During the six years he played for Newell's, he scored almost 500 goals as a member of ""The Machine of '87"", the near-unbeatable youth side named for the year of their birth, and regularly entertained crowds by performing ball tricks during half-time of the first team's home games.[14][15] However, his future as a professional player was threatened when, aged 10, he was diagnosed with a growth hormone deficiency. As his father's health insurance covered only two years of growth hormone treatment, which cost at least $1,000 per month, Newell's agreed to contribute, but later reneged on their promise.[16] He was scouted by Buenos Aires club River Plate, whose playmaker, Pablo Aimar, he idolised, but they declined to pay for his treatment.[17][18] His goalscoring idol growing up was Ronaldo, with Messi calling him ""the best forward I've ever seen"".[19]
+
+
+Messi enrolled at Barcelona's youth academy, La Masia, aged 13.
+As the Messi family had relatives in Catalonia, they sought to arrange a trial with Barcelona in September 2000. First team director Charly Rexach immediately wanted to sign him, but the board of directors hesitated; at the time it was highly unusual for European clubs to sign foreign players of such a young age. On 14 December, an ultimatum was issued for Barcelona to prove their commitment, and Rexach, with no other paper at hand, offered a contract on a paper napkin.[17][20] In February 2001, the family relocated to Barcelona, where they moved into an apartment near the club's stadium, Camp Nou. During his first year in Spain, Messi rarely played with the Infantiles due to a transfer conflict with Newell's; as a foreigner, he could only be fielded in friendlies and the Catalan league. Without football, he struggled to integrate into the team; already reserved by nature, he was so quiet that his teammates initially believed he was mute. At home, he suffered from homesickness after his mother moved back to Rosario with his brothers and little sister, María Sol, while he stayed in Barcelona with his father.[14][20][21]
+
+After a year at Barcelona's youth academy, La Masia, Messi was finally enrolled in the Royal Spanish Football Federation (RFEF) in February 2002. Now playing in all competitions, he befriended his teammates, among whom were Cesc Fàbregas and Gerard Piqué.[22] After completing his growth hormone treatment aged 14,[23] Messi became an integral part of the ""Baby Dream Team"", Barcelona's greatest-ever youth side. During his first full season (2002–03), he was top scorer with 36 goals in 30 games for the Cadetes A, who won an unprecedented treble of the league and both the Spanish and Catalan cups.[22][24] The Copa Catalunya final, a 4–1 victory over Espanyol, became known in club lore as the partido de la máscara, the final of the mask. A week after suffering a broken cheekbone during a league match, Messi was allowed to start the game on the condition that he wear a plastic protector; soon hindered by the mask, he took it off and scored two goals in 10 minutes before his substitution.[25] At the close of the season, he received an offer to join Arsenal, his first from a foreign club, but while Fàbregas and Piqué soon left for England, he chose to remain in Barcelona.",football,english,football,instructional
+Consider yourself as a football player: Would you rather play attacker or defender?,football,english,football,opinion
+Could you also tell me a joke on the rabbi playing golf on Yum Kipper?,golf,english,golf,creative
+"Got any ideas for Valentine's day with my fiance? We like to play video games, go walk around malls, maybe mini golfing but I'm open to any ideas",golf,english,golf,creative
+"Hi Open Assistant, let's play a game of chess! I will play as white and you will play as black.
+
+1. e4",chess,english,chess,creative
+I feel like this conversation has gone off the rails. How about a nice game of chess?,chess,english,chess,creative
+I want you to act as a rival chess player. I We will say our moves in reciprocal order. In the beginning I will be white. Also please don't explain your moves to me because we are rivals. After my first message i will just write my move. Don't forget to update the state of the board in your mind as we make moves. My first move is e4.,chess,english,chess,creative
+I would like to play a game of chess against you. I will play as white. My first move is pawn to E4. Could you make a visualization of the board and make your move?,chess,english,chess,creative
+"Let's play a game of chess, i'll make the first move: rook to a3.",chess,english,chess,creative
+"Let's play a game of chess. I'll start:
+1. d4",chess,english,chess,creative
+"Let's play chess in ascii!
+I'm playing white and my first move is g1 to f3",chess,english,chess,creative
+"Lets play a game of chess. Ill start as white:
+1. d4",chess,english,chess,creative
+"now, create your origin story of how you got into football and became famous",football,english,football,creative
+Pretend you are the world's best chess bot. What is your next move?,chess,english,chess,creative
+"The chess board:
+
+[r][n][b][q][k][b][n][r]
+[p][p][p][p][p][p][p][p]
+[  ][  ][  ][  ][  ][  ][  ][  ]
+[  ][  ][  ][  ][  ][  ][  ][  ]
+[  ][  ][  ][p][  ][  ][  ][  ]
+[  ][  ][  ][  ][  ][  ][  ][  ]
+[p][p][p][ ][p][p][p][p]
+[r][n][b][q][k][b][n][r]",chess,english,chess,creative
+"want to play chess? make a chessboard using this method 
+[X][X]
+[X][X]
+X is a generic symbol to represent any piece. create a list of symbols and assign them to each piece",chess,english,chess,creative
+Write a poem revealing the author's preference regarding playing attacker or defender in the sport of football?,football,english,football,creative
+"Write a poem that says how Middlesbrough FC are better than Sunderland FC. Use colloquial language from the North East of England, such as the term 'Howay'. Include reference to football hooliganism, and how Sunderland fans will get their heads kicked in. Use emojis.",football,english,football,creative
+"Write a short story about my italian friend who is gluten free, loves climbing mountains and plays tennis",tennis,english,tennis,creative
+Haz una analogía entre el anime Death Note y un partido de fútbol.,fútbol,spanish,football,creative
+"Hola, ayudame a crear un guión para mi video de Youtube basado en las reglas básicas del fútbol americano, el video debe tener un todo relajado y explicar claramente para personas que no sepan nada del tema, clasificalo en varios puntos.",fútbol,spanish,football,creative
+"Juguemos ajedrez, empiezo yo con blancas. d4.",ajedrez,spanish,chess,creative
+"Juguemos ajedrez!
+e4
+Tu turno",ajedrez,spanish,chess,creative
+Puedes jugar a una partida de ajedrez?,ajedrez,spanish,chess,creative
+"- What are the key components and technologies that make modern F1 cars so advanced and high-performing?
+- What are the rules and regulations governing F1 car design and engineering? How strict are they and what is the rationale behind them?
+- What characteristics make for a challenging and compelling F1 racetrack? How are tracks designed to test driver skill?
+- What are the key aspects of an F1 race that make it such an intense competitive spectacle? How do teams and drivers prepare and what are the strategies involved?
+- What are the economic aspects of F1? How is it such a lucrative business and what are the major sources of revenue? Who are the key sponsors and stakeholders?
+- Who are some of the most successful and legendary F1 drivers of all time? What makes a great F1 driver and what is the career path to reach F1?
+- How has F1 evolved over time? What were historic races and eras like? How has technology and the sport changed?",f1,english,f1,explanation
+Can you give me a brief history of Duke basketball?,basketball,english,basketball,explanation
+Can you give me some details on 2024 Olympics?,olympics,english,olympics,explanation
+Can you point me to some popular online chess communities then? I hope smurfing wont be a problem there.,chess,english,chess,explanation
+Can you provide the algebraic chess notation for the Sicilian Defense please?,chess,english,chess,explanation
+"Can you tell me how many bishops can be on an N by N chess board without them threatening each other, and what the reasoning is behind how these bishops are placed to achieve this?",chess,english,chess,explanation
+Can you tell me the names of manufacturers of the cars that participate in Formula One races?,formula one,english,f1,explanation
+Compare and contrast the advantages of the Tennison gambit and the queen's gambit in chess,chess,english,chess,explanation
+"Could you please give me guidance on how each piece moves on the chess board, especially the Knight which I have difficulty dealing with when I'm playing.",chess,english,chess,explanation
+Did anyone complete a knight's tour in a professional chess game so far?,chess,english,chess,explanation
+Do chess masters memorize patterns like this for each piece?,chess,english,chess,explanation
+Do US players dominate the international golf scene or are there strong contenders from other countries too?,golf,english,golf,explanation
+does that mean that ChatGPT would be better at chess than plain old stockfish,chess,english,chess,explanation
+Excellent. Now please explain to me the complex physics calculations that would go into building a robot arm that would make the optimal golf swing in a Scottish accent.,golf,english,golf,opinion
+Explain the rules of field hockey to a novice.,hockey,english,hockey,explanation
+Explain why this is a popular move to a beginner chess student.,chess,english,chess,explanation
+"How about the score in cricket, how does that work?",cricket,english,cricket,explanation
+How do you read chess notation?,chess,english,chess,explanation
+"how long does an American football match REALLY last, if you substract all the downtime?",american football,english,american football,explanation
+How many possible board combinations are there on a regular chessboard? Please show the step by step process to end up at the solution.,chess,english,chess,explanation
+How often does the World Cup occur?,world cup,english,football,explanation
+"I have heard people talking about the chess move ""en passant"", but I don't know what it is and how it works. Could you explain it to me?",chess,english,chess,explanation
+"I want to write a chess computer that uses alpha-beta culling. The program should use FEN as input. Is it possible, to use distributed computing for the tree search? Implement a simple example in a fitting language.",chess,english,chess,instructional
+"I wasnt specifically referring to VR as being useful for training for a marathon, but more so about VR being a good way to exercise in general. From a broader perspective, would VR activities help me get in better shape physically?",marathon,english,athletics,explanation
+I'd like to practice a bit before joining a chess club.  Is there any software I can use to learn chess first?  Which would you recommend for beginners?,chess,english,chess,explanation
+I'm going to be completely honest with you. I never heard of the guy. But I'm dating that chick and she is heavy into soccer and all that. Shoot me some other random soccer facts so I can seem more interesting to her,soccer,english,football,explanation
+"I'm not planning on doing the following thing, but would it be considered a criminal offense in the USA to fill up a soccer ball with concrete and place it on a soccer field in front of a goal, tempting someone to kick it?",soccer,english,football,explanation
+"I'm sorry, I don't understand what you mean by ""Yo"", can you tell me about the 2024 Olympics please?",olympics,english,olympics,explanation
+"I've also seen ""?"" and ""!"" used, what do those mean in chess notation?",chess,english,chess,explanation
+"If I want to train for a triathlon, should I focus on strength training or cardio? Why?",triathlon,english,athletics,explanation
+"In Chess, what does it mean to study an opening? Which should I learn first as a beginner?",chess,english,chess,explanation
+"In the anime series ""Midoriyama Koukou Koushien-hen,"" the students of Midoriyama High School's baseball team are transported to an alternate world where they must compete in a baseball tournament to save the world. What is the significance of baseball in this alternate world, and how do the students use their baseball skills to fight against the forces of evil?",baseball,english,baseball,explanation
+"interesting, What is the brief overview of the current tennis climate",tennis,english,tennis,explanation
+Is it possible to complete a knight's tour in a competitive chess game and win?,chess,english,chess,explanation
+Is there an official prize awarded to the best players like the golden ball by FIFA in football?,football,english,football,explanation
+Let's assume the sport is running a marathon. Is they any advantages to reducing drag by shaving and/or baldness? Is this a common practice amongst runners?,marathon,english,athletics,explanation
+"Please explain how golf works, like what is a mulligan?",golf,english,golf,explanation
+Please explain to me how the score system works in tennis?,tennis,english,tennis,explanation
+"Thank you! If I wanted to prepare a field for field hockey on property I own, what kinds of steps would be necessary to ensure a safe and fair game?",hockey,english,hockey,explanation
+"thanks for the chess explanation.
+can you now explain to me how to play russian roulette",chess,english,chess,explanation
+"Thanks, but on a second thought I am not sure if chess is the most fun game to learn for me. How can I decide which game to learn between chess, checkers, othello, poker, D&D and many others, considering that I have a shy and reserved personality and like long and thoughtful game sessions?",chess,english,chess,explanation
+Then how come all the famous football players are attackers?,football,english,football,explanation
+Try analyzing John Cena's personality and past performances in both wrestling and movies and come up with a list of dance moves that he might be able to perform well enough without practicing.,wrestling,english,wrestling,creative
+What about UEFA?,uefa,english,football,explanation
+"What does a ""+"" sign signify in chess notation?",chess,english,chess,explanation
+What if my mini golf game happens in the wild west?,golf,english,golf,explanation
+"What is a central midfielder? Also, what is an attacking and defensive midfielder? I know nothing about football, so please explain this to me in a way that I can understand.",football,english,football,explanation
+What is en passant in chess,chess,english,chess,explanation
+What is Formula One?,formula one,english,f1,explanation
+What is the best way to learn to play chess?,chess,english,chess,explanation
+What makes Formula One different from other car racing organizations? Is it just the open-wheel and single-seat design of the cars?,formula one,english,f1,explanation
+What other symbols are used in chess?,chess,english,chess,explanation
+When and where was the first Football World Cup?,world cup,english,football,explanation
+Who won the football World Cup in 2019?,world cup,english,football,explanation
+Would the same hold true for 3D chess?,chess,english,chess,explanation
+¿Cuál fue el plantel de jugadores de la selección Argentina en la copa mundial de la FIFA en 1978 y 1986?,fifa,spanish,football,explanation
+¿Cuándo y quién creó el ajedrez?,ajedrez,spanish,chess,explanation
+¿Cuántos metros cuadrados hay en una cancha de fútbol?,fútbol,spanish,football,explanation
+¿En que año ganó España su primer mundial de fútbol?,fútbol,spanish,football,explanation
+¿Podrías decirme las ventajas de jugar al fútbol por sobre otros deportes?,fútbol,spanish,football,explanation
+¿Por qué los jugadores de fútbol a veces llevan una máscara puesta?,fútbol,spanish,football,explanation
+"¿Qué partidos de fútbol se juegan en la Liga española el próximo fin de semana? ¿En qué horario, y dónde se pueden ver?",fútbol,spanish,football,explanation
+¿Quién es el máximo anotador de la historia de la NBA?,nba,spanish,basketball,explanation
+¿Sabrías decirme que es comer al paso en ajedrez?,ajedrez,spanish,chess,explanation
+Cual es la nacionalidad cuyos equipos de fútbol ha ganado más veces la Champions League,fútbol,spanish,football,explanation
+"En ajedrez, ¿cuándo me puedo enrocar?",ajedrez,spanish,chess,explanation
+En ajedrez. Cuál es la pieza más valiosa y la menos valiosa?,ajedrez,spanish,chess,explanation
+Estuve aprendiendo las reglas del ajedrez pero no entendí como funciona la captura al paso ¿podrías explicarme?,ajedrez,spanish,chess,explanation
+Gracias! ahora me gustaría que crearas el código de un modelo de Machine Learning en Python y Tensorflow el cual pueda ser entrenado para poder jugar Ajedrez de la misma forma en la que se desarrolló AlphaZero.,ajedrez,spanish,chess,explanation
+Hazme un resumen de la Copa Mundial de FIFA 2022,fifa,spanish,football,explanation
+"Hola, te tengo una pregunta de fútbol: ¿me podrías decir todos los campeones de la Copa Libertadores y sus respectivas cantidades de copas ganadas? Gracias",fútbol,spanish,football,explanation
+Nómbrame todos los jugadores que han ganado el MVP de la NBA ordenados de presente a pasado.,nba,spanish,basketball,explanation
+"Quien es el máximo anotador, histórico, de la NBA?",nba,spanish,basketball,explanation
+Are there any specific strategies or tips that can help me improve my chess skills faster?,chess,english,chess,instructional
+"Can you get the score results for Liverpool Football Club, only, for the last month? Display the fixture, the date, the results all line by line?
+Please use the website www.bbc.co.uk/football as a source of information on this. You can use other sources too, if that is useful to you.",football,english,football,instructional
+"Can you please create a training plan for my upcoming marathon, which is in 2 months?",marathon,english,athletics,instructional
+"Help me create a content calendar. I want to be able to work 40 hours per week, but also find time to stream and release photos and videos during the rest of the week. Please suggest different types of content and best times to post. I am a streamer who also wrestles, and I need to create content both for streaming video games and also for wrestling.",wrestling,english,wrestling,instructional
+"How would I begin training for a marathon as a man who is pretty overweight for his size and has no previous marathon or running experience? Give me a step by step process and some tips, along with encouragement at the end of your response.",marathon,english,athletics,instructional
+"Please test me on this. I want to remember this, so encourage diversity in your questions. Make it a multiple-choice quiz. Show me 3 questions at a time. I will answer them in the order you give them combined together into one response with each answer on a new line. There will be a total of 6 questions. Make each question harder than the last. Test me on converting from plain english to chess notation and the other way around. Once we are done with all the questions, and only then, tell me how many I got right.",chess,english,chess,instructional
+What are some good foods to eat when training for a triathlon?,triathlon,english,athletics,instructional
+What are some tips for getting better at tennis?,tennis,english,tennis,instructional
+"Buenas tardes, quiero hacer una tabla que contenga los campeones mundiales de ajedrez, su pais de origen y el maximo elo que obtuvo.
+
+Me ayudas?",ajedrez,spanish,chess,instructional
+Decime cómo se juega al ajedrez.,ajedrez,spanish,chess,instructional
+Me puedes orientar para mejorar en ajedrez,ajedrez,spanish,chess,instructional
+Primeros pasos para aprender ajedrez siendo principalmente.,ajedrez,spanish,chess,instructional
+Puedes crearme un código en python para hacer una interfaz para un juego de ajedrez?,ajedrez,spanish,chess,instructional
+puedes ser mi profesor de ajedrez de mas alto nivel,ajedrez,spanish,chess,instructional
+"Resumeme el siguiente texto en 3 lineas de la manera mas elaborada posible: El futbolista japonés Kaoru Mitoma de 25 años está siendo una de las revelaciones del Brighton & Hove Albion junto a su compañero argentino Alexis Mac Allister en la actual Premier League. El regateador japonés es muy respetado en su país ya que lo consideran un ejemplo por su gran talento y sobre todo por no descuidar sus estudios. Y es que Mitoma con apenas 16 años rechazó su primer contrato profesional porque prefería seguir sus estudios y llegar a la Universidad.
+El futbolista japonés Kaoru Mitoma de 25 años está siendo una de las revelaciones del Brighton & Hove Albion junto a su compañero argentino Alexis Mac Allister en la actual Premier League. El jugador nipón ha ayudado al equipo de las gaviotas a consagrarse en la octava plaza gracias a sus cuatro goles y dos asistencias en 16 partidos y con un 56 por ciento de regates completados, su especialidad.
+
+El regateador japonés es muy respetado en su país (incluso lo comparan con el famoso dibujo animado Oliver Atom) ya que lo consideran un ejemplo por su gran talento y sobre todo por no descuidar sus estudios. Y es que Mitoma con apenas 16 años tuvo la oportunidad de firmar su primer contrato profesional con el Kawasaki Frontale, equipo de la J1 League, pero rechazó la oferta porque prefería seguir sus estudios y llegar a la Universidad. Él sentía que aún no estaba preparado para competir en el fútbol profesional y entendía que debía estudiar primero. 
+Cuando llegó a la universidad decidió formarse y estudiar Educación Física en la Universidad de Tsukuba, donde aprendió mucho sobre el entrenamiento, la nutrición y en general sobre el deporte de alto rendimiento. A pesar de estar estudiando, el jugador nipón continuaba desarrollándose como futbolista disputando torneos universitarios en Japón. En el último año de Universidad, Mitoma decidió escribir su tesis sobre el proceso de regate y cómo lograr pasar a sus oponentes, pero lo más llamativo fue el cómo realizó la investigación.
+
+El jugador japonés se colocó una cámara GoPro en la frente para examinar como pasaba a sus adversarios y analizar su campo de visión antes de recibir el balón para realizar el regate. En su tesis explicó que previo a recibir el balón se fija en el rival y en el espacio que está en frente suyo. 
+
+Mitoma añade que al comenzar su regate apenas mira hacia abajo, ya que ejecuta hábilmente una finta corporal con la que si logra cambiar el centro de gravedad del oponente el regate es efectuado con éxito porque logra rebasar al rival. Fue tan impresionante su tesis sobre el mecanismo de regate para escapar que aún se conserva en el laboratorio de la Universidad de Tsukuba.",fútbol,spanish,football,instructional
+"1. For the social media posts, what kind of tone or style do you recommend to promote the upcoming stream or wrestling match? Should the posts be informal and conversational or more professional and polished? How can you strike a good balance?
+2. For the YouTube videos, what kinds of topics or content do you think would resonate most with your audience? How can you determine what your viewers would find most interesting or valuable? Do you have any ideas for creating engaging video titles or thumbnails to attract more viewers?
+3. For the streaming schedule, what are some strategies to grow your viewership and build an audience? How can you be consistent with your schedule while also being considerate of your personal life or other commitments? What are some ways to keep your streams engaging and interactive for viewers?
+4. Overall, how can you best balance creating content, engaging with your audience, and avoiding burnout? Are there any tools or strategies you would recommend to help stay organized or on top of your content calendar? How might you adjust your calendar based on what's working well or not working?",wrestling,english,wrestling,opinion
+And who are the best ever NBA players?,nba,english,basketball,opinion
+"Are you sure that American Football is dangerous? I understand that people do get injured occasionally, but don't the players wear strong helmets and padding? Could you give some figures regarding the the number of injuries in American Football verses another in sport, such as volleyball?",american football,english,american football,opinion
+"Assuming that each level of my game is a different hole on the minigolf course, what are some creative themes for different levels? They should be colorful and feature shapes with a very distinct outline, so that they're easily recognizable in the low poly style. For example, it seems the ""giant clown hole"" is a ubiquitous concept in minigolf. That displays many of the properties I'm looking for, but I'd like something slightly less generic/cliche.",golf,english,golf,opinion
+"Can you recommend me some specific exercises, that would be best suited for training for a triathlon?",triathlon,english,athletics,opinion
+Can you tell me what would be a nice easy to learn chess opening for a beginner?,chess,english,chess,instructional
+How can I learn to play chess quickly and efficiently?,chess,english,chess,instructional
+"How do you feel about maple syrup and hockey, eh?",hockey,english,hockey,opinion
+How is the best football player of all time?,football,english,football,opinion
+I don't really like football. What are other sports I could play?,football,english,football,opinion
+"If a kangaroo could play basketball, do you think it would be good at it?",basketball,english,basketball,opinion
+Is the Bongcloud a strong chess opening to play as White?,chess,english,chess,opinion
+Please explain your answer. Can you even play football?,football,english,football,opinion
+Statistically who is the best NBA player of all time and who is the best active player? Compare the stats and figure out the exact percentage needed and area for the active player must improve on the become the best player of all time.,nba,english,basketball,opinion
+Those are no longer NBA players.  Can you give me a list of the best current NBA players?,nba,english,basketball,opinion
+"Those don’t seem personal enough, do remember we like video games and mini golfing, perhaps you could suggest some ideas based on those interests?",golf,english,golf,opinion
+What cool props would be good to add to a mini golf video game with a low poly style?,golf,english,golf,opinion
+Who are the best NBA players,nba,english,basketball,opinion
+Who are the currently playing best NBA players?,nba,english,basketball,opinion
+Who can be considered the best currently active American football player?,american football,english,american football,opinion
+Who was the best american football player of all time and how can I be good as him?,american football,english,american football,opinion
+¿Cual es el mejor equipo de fútbol?,fútbol,spanish,football,opinion
+¿Por qué consideras que el fútbol es el deporte preferido en muchas culturas por más que sean culturas extremadamente diferentes entre si?,fútbol,spanish,football,opinion
+¿Qué puedo hacer para subir mi nivel jugando ajedrez?,ajedrez,spanish,chess,opinion
+¿Quién es el mejor jugador de ajedrez de la historia?,ajedrez,spanish,chess,opinion
+"Hola, ¿Me podrías decir cuál fue el mejor jugador de baloncesto de la liga ACB en el año 2019?",baloncesto,spanish,basketball,opinion
+Que debe de hacer Aston Martin para ganar el mundial de F1 en 2023,f1,spanish,f1,opinion
