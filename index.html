@@ -101,6 +101,11 @@
 
   <h1>Sports Prompt Data Visualisations</h1>
 
+  <p class="subtitle">
+    Data Visualisations of Sports-Oriented Prompts  <br><br>
+    <a href="dataset.csv" download>Download Dataset Here</a>
+  </p>
+
   <!-- ================= PIE CHARTS ================= -->
   <div class="section">
     <div class="chart-grid">
@@ -261,6 +266,7 @@ d3.csv("dataset.csv").then(data => {
       .attr("text-anchor", "middle")
       .attr("fill", "white")
       .attr("font-weight", "bold")
+      .style("font-size", "11px")
       .text(d => `${((d.data.v / total) * 100).toFixed(1)}%`);
 
     drawLegend(svg, pieData.map(d => d.k), color, 10, 10);
